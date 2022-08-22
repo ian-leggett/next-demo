@@ -14,16 +14,16 @@ import Link from "next/link";
 //   };
 // }
 
-export async function getStaticProps() {
-  const response = await fetch(
-    "https://jherr-pokemon.s3.us-west-1.amazonaws.com/index.json"
-  );
-  return {
-    props: {
-      pokemon: await response.json(),
-    },
-  };
-}
+// export async function getStaticProps() {
+//   const response = await fetch(
+//     "https://jherr-pokemon.s3.us-west-1.amazonaws.com/index.json"
+//   );
+//   return {
+//     props: {
+//       pokemon: await response.json(),
+//     },
+//   };
+// }
 
 export default function Home() {
   const [pokemon, setPokemon] = useState([]);
