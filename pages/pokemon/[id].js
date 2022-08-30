@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import styles from "../../styles/Details.module.css";
 import Link from "next/link";
+import Image from "next/image";
 
 // export async function getServerSideProps({params}) {
 //   const response = await fetch(
@@ -76,10 +77,13 @@ export default function Details() {
       </div>
       <div className={styles.layout}>
         <div>
-          <img
+          <Image
             className={styles.picture}
             src={`https://jherr-pokemon.s3.us-west-1.amazonaws.com/${pokemon.image}`}
             alt={pokemon.name.english}
+            width={400}
+            height={400}
+            // quality={100}
           />
         </div>
         <div>
